@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Signup Form</title>
+
+    <style>
+      /* Page styling */
+      .main {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f2f2f2;
+        font-family: Arial;
+      }
+
+      /* Signup container */
+      .signup-box {
+        background: white;
+        padding: 30px;
+        width: 320px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Heading */
+      .signup-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: green;
+      }
+
+      /* Input fields */
+      .signup-box input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      /* Button */
+      .signup-box button {
+        width: 97%;
+        padding: 10px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      /* Hover effect */
+      .signup-box button:hover {
+        background: #218838;
+      }
+
+      /* Login link */
+      .signup-box p {
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .signup-box a {
+        text-decoration: none;
+        color: #007bff;
+      }
+
+      .signup-box a:hover {
+        text-decoration: underline;
+      }
+
+      .code {
+        margin-top: 40px;
+      }
+
+      pre {
+        background: white;
+        color: black;
+        padding: 20px;
+        border-radius: 8px;
+        overflow: auto;
+
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="/css/index.html">Back</a><br />
+    <div class="main">
+      <div class="signup-box">
+        <h2>Create Account</h2>
+
+        <form>
+          <input type="text" placeholder="Full Name" required />
+
+          <input type="email" placeholder="Email Address" required />
+
+          <input type="password" placeholder="Password" required />
+
+          <input type="password" placeholder="Confirm Password" required />
+
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <p>Already have an account? <a href="#">Login</a></p>
+      </div>
+    </div>
+
+    <div class="code">
+      <pre id="sourceCode"></pre>
+    </div>
+
+    <script>
+      fetch(window.location.href)
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("sourceCode").textContent = data;
+        });
+    </script>
+  </body>
+</html>
