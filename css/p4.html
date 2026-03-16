@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <title>To-Do List UI</title>
+
+    <style>
+      .main {
+        font-family: Arial;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Container */
+
+      .todo-container {
+        background: white;
+        width: 350px;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Title */
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Input Section */
+
+      .input-box {
+        display: flex;
+        gap: 10px;
+      }
+
+      input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      /* Button */
+
+      button {
+        padding: 10px 15px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #45a049;
+      }
+
+      /* Task List */
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+      }
+
+      /* Task Item */
+
+      li {
+        background: rgb(212, 252, 212);
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border-left: 4px solid #4caf50;
+      }
+
+      .code {
+        margin-top: 40px;
+      }
+
+      pre {
+        background: white;
+        color: black;
+        padding: 20px;
+        border-radius: 8px;
+        overflow: auto;
+
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="/css/index.html">Back</a><br />
+    <div class="main">
+      <div class="todo-container">
+        <h2>My To-Do List</h2>
+
+        <div class="input-box">
+          <input type="text" placeholder="Enter a task" />
+          <button>Add</button>
+        </div>
+
+        <ul>
+          <li>Learn HTML</li>
+          <li>Practice CSS</li>
+          <li>Build To-Do UI</li>
+          <li>Study JavaScript</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="code">
+      <pre id="sourceCode"></pre>
+    </div>
+
+    <script>
+      fetch(window.location.href)
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("sourceCode").textContent = data;
+        });
+    </script>
+  </body>
+</html>

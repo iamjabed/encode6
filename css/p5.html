@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hero Section</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Hero Section */
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 10%;
+        background: #f5f5f5;
+        height: 80dvh;
+      }
+
+      /* Text Section */
+
+      .hero-text {
+        width: 50%;
+      }
+
+      .hero-text h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      /* Button */
+
+      .hero-text button {
+        padding: 12px 25px;
+        border: none;
+        background: #007bff;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 6px 8px 10px rgb(179, 179, 179);
+      }
+
+      .hero-text button:hover {
+        background: #0056b3;
+      }
+
+      /* Image Section */
+
+      .hero-image {
+        width: 50%;
+      }
+
+      .hero-image img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 15px 16px 10px rgb(189, 189, 189);
+      }
+
+      .code {
+        margin-top: 40px;
+      }
+
+      pre {
+        background: white;
+        color: black;
+        padding: 20px;
+        border-radius: 8px;
+        overflow: auto;
+
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="/css/index.html">Back</a><br />
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Learn Web Development</h1>
+        <p>
+          Start your journey with HTML, CSS and JavaScript. Build modern and
+          responsive websites easily.
+        </p>
+        <button>Get Started</button>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="/images/CSS/Projects/project-5/project5.jpg"
+          alt="Hero Image"
+        />
+      </div>
+    </section>
+
+    <div class="code">
+      <pre id="sourceCode"></pre>
+    </div>
+
+    <script>
+      fetch(window.location.href)
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("sourceCode").textContent = data;
+        });
+    </script>
+  </body>
+</html>

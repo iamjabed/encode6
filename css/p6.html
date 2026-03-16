@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Simple Landing Page</title>
+
+    <style>
+      /* Reset */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial;
+      }
+
+      /* Hero Section */
+
+      .hero {
+        height: 100vh;
+        background: url("https://picsum.photos/1600/900") center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .hero button {
+        padding: 12px 25px;
+        background: #ff6b6b;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .hero button:hover {
+        background: #ff4b4b;
+      }
+
+      /* Features Section */
+
+      .features {
+        padding: 60px 20px;
+        background: #f4f4f4;
+        text-align: center;
+      }
+
+      .features h2 {
+        margin-bottom: 40px;
+        font-size: 35px;
+      }
+
+      .feature-box {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .feature {
+        background: white;
+        padding: 25px;
+        width: 250px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature h3 {
+        margin-bottom: 10px;
+      }
+
+      /* Testimonials */
+
+      .testimonials {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .testimonials h2 {
+        margin-bottom: 40px;
+        font-size: 35px;
+      }
+
+      .testimonial-box {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .testimonial {
+        background: #fafafa;
+        padding: 20px;
+        width: 250px;
+        border-left: 5px solid #ff6b6b;
+        border-radius: 5px;
+      }
+
+      /* Footer */
+
+      footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <a href="/css/index.html">Back</a><br />
+    <section class="hero">
+      <h1>Welcome to Our Website</h1>
+      <p>Build modern websites easily with HTML & CSS</p>
+      <button>Get Started</button>
+    </section>
+
+    <!-- Features Section -->
+
+    <section class="features">
+      <h2>Our Features</h2>
+
+      <div class="feature-box">
+        <div class="feature">
+          <h3>Fast</h3>
+          <p>Our website loads quickly and works smoothly.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Responsive</h3>
+          <p>Works perfectly on mobile, tablet, and desktop.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Easy to Use</h3>
+          <p>Simple and user-friendly design for everyone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+
+    <section class="testimonials">
+      <h2>What Users Say</h2>
+
+      <div class="testimonial-box">
+        <div class="testimonial">
+          <p>"Amazing design and very easy to use."</p>
+          <strong>- Rahul</strong>
+        </div>
+
+        <div class="testimonial">
+          <p>"Helped me learn web development quickly."</p>
+          <strong>- Priya</strong>
+        </div>
+
+        <div class="testimonial">
+          <p>"Great experience with this platform."</p>
+          <strong>- Aman</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+      <p>© 2026 My Landing Page | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
